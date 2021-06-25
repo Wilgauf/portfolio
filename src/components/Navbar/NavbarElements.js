@@ -3,11 +3,11 @@ import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
 
 export const Nav =styled.nav`
-    background: #000;
+    background: ${({scrollNav})=> (scrollNav ? '#000' : 'transparent')};
     height: 80px;
-    ${'' /* margin-top: -80px; */}
+    margin-top: -80px;
     display:flex;
-    justify-content:center;
+    justify-content: center;
     align-items:center;
     font-size:1rem;
     position: sticky;
@@ -81,7 +81,13 @@ export const NavLinks = styled(LinkS)`
     height:100%;
     cursor:pointer;
 
-    &.active{
-        border-bottom: 3px solid #f5aa42;
+    &.active {
+        border-bottom: 3.5px solid #00BFA6;
     }
+`
+
+export const Img = styled.img`
+    width: 100px;
+    margin: 0 0 0px 0;
+
 `

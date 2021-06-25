@@ -7,11 +7,20 @@ export const HomeContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    height: 800px;
+    height: 1000px;
     position: relative;
     z-index: 1;
 
-    ${'' /* Add :before styles */}
+    :before {
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%), linear-gradient(180deg, rgba(0,0,0.2) 0%, transparent 100%)
+        z-index:2;
+    }
 `
 
 export const HomeBG = styled.div`
@@ -46,7 +55,7 @@ align-items: center;
 `
 
 export const HomeH1 = styled.h1`
-    color: #fff;
+    color: #ff0000;
     font-size: 48px;
     text-align:center;
     @media screen and (max-width:760px){
@@ -60,7 +69,7 @@ export const HomeH1 = styled.h1`
 
     export const HomeP = styled.p`
         margin-top: 24px;
-        color: #fff;
+        color: #ff0000;
         font-size: 24px;
         text-align: center;
         max-width: 600px;

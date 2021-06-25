@@ -17,13 +17,14 @@ const HomeSection = () => {
             </HomeBG>
             <HomeContent>
                 <HomeH1>Wilson Gauf</HomeH1>
-                <HomeP>Full Stack Software Engineer and other stuff about me to put here!</HomeP>
+                <HomeP>Full Stack Software Engineer</HomeP>
                 <HomeBtnWrapper>
-                    <Button to="signup" 
+                    <Button to="about" 
+                    smooth={true} duration={900} spy={true} exact='true' offset={-80}
                     onMouseEnter={onHover}
                     onMouseLeave={onHover}
                     >
-                        Get started {hover ? <ArrowForward /> : <ArrowRight />}
+                        Learn More {hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
                 </HomeBtnWrapper>
             </HomeContent>
